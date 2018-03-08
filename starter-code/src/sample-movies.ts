@@ -1,4 +1,4 @@
-[
+const movies = [
   {
     id: 1,
     title: "The Shawshank Redemption",
@@ -16,7 +16,9 @@
       "William Sadler",
       "Clancy Brown",
       "Gil Bellows"
-    ]
+    ],
+    room: 1,
+    hour: ['Monday: 5pm', 'Wednesday: 5pm']
   }, {
     id: 2,
     title: "The Godfather",
@@ -34,7 +36,9 @@
       "Richard S. Castellano",
       "Robert Duvall",
       "Sterling Hayden"
-    ]
+    ],
+    room: 2,
+    hour: ['Monday: 7pm', 'Wednesday: 6pm']
   }, {
     id: 3,
     title: "The Godfather Part II",
@@ -52,7 +56,9 @@
       "Robert De Niro",
       "John Cazale",
       "Talia Shire"
-    ]
+    ],
+    room: 3,
+    hour: ['Monday: 3pm', 'Wednesday: 6pm']
   }, {
     id: 4,
     title: "The Dark Knight",
@@ -70,9 +76,11 @@
       "Michael Caine",
       "Maggie Gyllenhaal",
       "Gary Oldman"
-    ]
+    ],
+    room: 4,
+    hour: ['Monday: 8pm', 'Wednesday: 8pm']
   }, {
-  {
+  
     id: 5,
     title: "Schindler's List",
     poster: "https://i.imgur.com/IWZJOmu.jpg",
@@ -89,6 +97,9 @@
       "Caroline Goodall",
       "Jonathan Sagall",
       "Embeth Davidtz"
-    ]
+    ],
+    room: 5,
+    hour: ['Monday: 10pm', 'Wednesday: 10pm']
   }
 ]
+export default movies;

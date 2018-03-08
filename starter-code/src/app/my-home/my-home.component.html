@@ -1,0 +1,11 @@
+<h1>
+My Cinema Board: 
+  </h1>
+<section>
+
+    <div class="list-movies" *ngFor="let movie of  moviesList.getMovies()">
+      <h2>Room: {{movie.room}}</h2>
+      <img src="{{movie.poster}}" alt="{{movie.title}}">
+      <h2><a [routerLink]="['../movie', movie.id]" >{{movie.title}}</a></h2>
+    </div>
+</section>

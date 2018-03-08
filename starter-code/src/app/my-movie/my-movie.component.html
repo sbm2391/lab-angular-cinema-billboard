@@ -1,0 +1,16 @@
+<h3>
+    {{ moviesList.getMovie(movieId).title }}
+  </h3>
+  <img src="{{ moviesList.getMovie(movieId).poster }}" alt="{{ moviesList.getMovie(movieId).title }}">
+  <p>Year: {{ moviesList.getMovie(movieId).year }}</p>
+  <p>Director: {{ moviesList.getMovie(movieId).director }}</p>
+  <h3>Actors: </h3>
+  <ul>
+    <li *ngFor="let actor of moviesList.getMovie(movieId).actors">{{ actor }}</li>
+  </ul>
+  <p>Room: {{moviesList.getMovie(movieId).room}}</p>
+  <h3>Sessions:</h3>
+  <ul>
+      <li *ngFor="let h of moviesList.getMovie(movieId).hour">{{ h }}</li>
+    </ul>
+  <a [routerLink]="['/']"> Back to list </a>
