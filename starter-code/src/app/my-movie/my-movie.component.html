@@ -1,16 +1,32 @@
-<h3>
-    {{ moviesList.getMovie(movieId).title }}
-  </h3>
-  <img src="{{ moviesList.getMovie(movieId).poster }}" alt="{{ moviesList.getMovie(movieId).title }}">
-  <p>Year: {{ moviesList.getMovie(movieId).year }}</p>
-  <p>Director: {{ moviesList.getMovie(movieId).director }}</p>
-  <h3>Actors: </h3>
-  <ul>
-    <li *ngFor="let actor of moviesList.getMovie(movieId).actors">{{ actor }}</li>
-  </ul>
-  <p>Room: {{moviesList.getMovie(movieId).room}}</p>
-  <h3>Sessions:</h3>
-  <ul>
-      <li *ngFor="let h of moviesList.getMovie(movieId).hour">{{ h }}</li>
-    </ul>
-  <a [routerLink]="['/']"> Back to list </a>
+
+
+
+
+  <div class="col s12 m7">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="{{ moviesList.getMovie(movieId).poster }}" alt="{{ moviesList.getMovie(movieId).title }}">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+              <h3>
+                  {{ moviesList.getMovie(movieId).title }}
+                </h3>
+              <p><b>Year:</b>  {{ moviesList.getMovie(movieId).year }}</p>
+              <p><b>Director: </b>  {{ moviesList.getMovie(movieId).director }}</p>
+              <p><b>Synopsis: </b>  {{ moviesList.getMovie(movieId).synopsis }}</p>
+              <p><b>Actors:</b> <span *ngFor="let actor of moviesList.getMovie(movieId).actors">{{ actor }}, </span></p>
+              <p><b>Genres:</b> <span *ngFor="let genre of moviesList.getMovie(movieId).genres">{{ genre }}, </span></p>
+              <p><b>Room:</b> {{moviesList.getMovie(movieId).room}}</p>
+              <p><b>Sessions:  </b><span *ngFor="let h of moviesList.getMovie(movieId).hour">{{ h }}, </span></p>
+          
+                 
+    
+          </div>
+          <div class="card-action">
+            <a  [routerLink]="['/']">Back to list</a>
+          </div>
+        </div>
+      </div>
+    </div>
+            

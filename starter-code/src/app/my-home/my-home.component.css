@@ -1,27 +1,17 @@
-section, .list-movies {
+
+section .row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
-}
-
-section {
-    flex-direction: row
-}
-
-.list-movies{
-    flex-direction: column;
-    width:20vw;
-    margin: 20px;
-    
-}
-
-.list-movies img{
-    width:20vw;
-}
-
-.list-movies h2{
-    margin: 10px auto;
+    flex-direction: row;
+    box-sizing: border-box;
     text-align: center;
-
 }
+
+section img{
+   height: 60vh;
+}
+section h2{
+    text-align: center;
+ }
